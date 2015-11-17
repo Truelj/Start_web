@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap-image Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class ="container">
+        <p>
+            The .img-responsive class makes the image scale nicely to the parent element
+            (resize the browser window to see the effect):
+        </p>
+        <img class="img-responsive" src ="pink rose.jpg">
+    </div>
+    
+    <div class="container">
+        <div class="well ">
+            <h2>Image of flowers (coz I love flowers!)</h2>
+            <p>The .thumbnail class can be used to display an image gallery. Click on the images to see it in full size:
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <a href="bloom.jpg" class="thumbnail">
+                    <p>To see lots of flowers bloom</p>
+                    <img src="bloom.jpg" class="img-circle" style="width:150px;height:150px">
+                </a>
+            </div>
+            <div class ="col-md-4">
+                <a href="cherry bloom.jpg" class="thumbnail">
+                    <p>A beautiful cherry bloom in Paris?</p>
+                    <img src="cherry bloom.jpg" class="img-circle" style="width:150px; height:150px">
+                </a>
+            </div>
+            <div class ="col-md-4">
+                <a href="pink rose.jpg" class="thumbnail">
+                    <p>Enjoy a journey to pick pink rose</p>
+                    <img src="pink rose.jpg" class="img-circle" style="width:150px; height:150px">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>

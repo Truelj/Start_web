@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Bootstrap-tabs
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h3>menu in HTML</h3>
+            <ul class="list-inline">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <h3>Tabs in Bootstrap</h3>
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h3>tabs with drop down menu</h3>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#">Home</a></li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1<span class="caret"></span></a> 
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Submenue 1-1</a></li>
+                        <li><a href="#">Submenue 1-2</a></li>
+                        <li><a href="#">Submenue 1-3</a></li>
+                        <li><a href="#">Submenue 1-4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menue 2<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Submenue 2-1</a></li>
+                        <li><a href="#">Submenue 2-2</a></li>
+                        <li><a href="#">Submenue 2-3</a></li>
+                        <li><a href="#">Submenue 2-4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menue 3<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Submenue 3-1</a></li>
+                        <li><a href="#">Submenue 3-2</a></li>
+                        <li><a href="#">Submenue 3-3</a></li>
+                        <li><a href="#">Submenue 3-4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <h3>To center/justify the tabs and pills, use the .nav-justified class</h3>
+            <ul class="nav nav-pills nav-justified">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+                <li><a href="#">Menu 4</a></li>
+        </div>
+        
+        <div class="container">
+            <h3>Vertical pills with dropdown menues</h3>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Submenue 1-1</a></li>
+                        <li><a href="#">Submenue 1-2</a></li>
+                        <li><a href="#">Submenue 1-3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 1<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Submenue 2-1</a></li>
+                        <li><a href="#">Submenue 2-2</a></li>
+                        <li><a href="#">Submenue 2-3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 2<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Submenue 3-1</a></li>
+                        <li><a href="#">Submenue 3-2</a></li>
+                        <li><a href="#">Submenue 3-3</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+        
+        <div class="container">
+            <h3>Dynamic Tabls</h3>
+            <ul class="nav nav-tabs">
+                <li class="active "><a href="#home" data-toggle="tab">Home</a></li>
+                <li class=""><a href="#menu1" data-toggle="tab">Menu1</a></li>
+                <li class=""><a href="#menu2" data-toggle="tab">Menu2</a></li>
+                <li class=""><a href="#menu3" data-toggle="tab">Menu3</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane" id="home">
+                    tab-pane for home
+                </div>
+                <div class="tab-pane" id="menu1">
+                    tab-pane for menu1
+                </div>
+                <div class="tab-pane" id="menu2">
+                    tab-pane for menu2
+                </div>
+                <div class="tab-pane" id="menu3">
+                    tab-pane for  menu3
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="accordion">
+    <div class="container">
+      <h2>Simple Collapsible</h2>
+      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo" data-parent="#accordion">show info</button>
+      <div id="demo" class="collapse in">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+    <div class="container">
+        <h2>collapsible panel</h2>
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#collapsed-panel" data-parent="#accordion">show panel</button>
+        <div class="panel-group collapse" id ="collapsed-panel">
+            <div class="panel panel-default">
+                <div class="panel panel-heading">The heading of the panel</div>
+                <div class="panel panel-body">The body of the panel</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>collapsible picture</h2>
+            <button type="button" class="btn" data-toggle="collapse" data-target="#collapsed-image" data-parent="#accordion">show image</button> 
+            <div class="collapse" id="collapsed-image">
+                <img src="pink rose.jpg" class="thumbnail" style="width:150px;height:150px"> 
+            </div>
+    </div>
+    <div class="container">
+        <h2>collapsible panel 2</h2>
+        <div class="panel-group">
+            <div class="panel-default">
+                <div class="panel-heading">
+                    <a href="#collapsed-body" data-toggle="collapse" data-parent="#accordion">click to see the collapsed body</a>
+                </div>
+                <div class="panel-body collapse" id="collapsed-body">
+                    This is the collapsed body  
+                </div>
+            </div>
+            
+        </div>
+    </div>
+      
+    <div class="container">
+        <h2>collapsible list group</h2>
+        <div class="panel-group">
+            <div class="panel-default">
+                <div class="panel-heading">
+                    <a href="#collapsed-list" data-toggle="collapse" data-parent="#accordion"> click to see the collapsed list</a>
+                </div>
+                <div class="panel-body collapse" id="collapsed-list">
+                    <ul class="list-group">
+                        <li class="list-group-item">one</li>
+                        <li class="list-group-item">Two</li>
+                        <li class="list-group-item">Three</li>
+                            
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

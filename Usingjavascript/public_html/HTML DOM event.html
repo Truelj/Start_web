@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+A JavaScript can be executed when an event occurs, like when a user clicks on an HTML elements.
+To execute code when a user clicks on an element, add JacaScript code to an HTML event attribute.
+Examples of HTML events:
+    *When  a user clicks the mouse (onlick)
+    *When  a webpage has loaded(onload)
+    *When an image has been loaded
+    *When the mouse moves over an element (onmouseover, onmouseout, onmousedown, onmouseup)
+    *When an input field is changed (onchange)
+    *When an HTML form is submitted
+    *When a user strokes a key
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body  onload="mymessage();checkCookies()">
+        <!--Check cookies used when the web page is loaded-->
+        <p id ="demo"></p>
+        <h1 onclick="this.innerHTML='Ooops!'">Click on this text!</h1>
+        <h1 onclick="changeTwo(this)">Click on this text!</h1>
+        <h1 id = "three" onclick="changeThree()">Click on this text!</h1>
+        <h1 id ="four">Click on this text!</h1>
+        <input type="text" onfocus="this.style.background='yellow'" onchange="this.value=this.value.toUpperCase()">
+        <input  id ="inputtext" type="text" onchange="toUpperCase()">
+        <p style="color:blue" onmouseover="this.innerHTML='out'" onmouseout="this.innerHTML='IN'">IN</p>
+        <p style="color:blue" onmousedown="this.innerHTML='release'" onmouseup="this.innerHTML='Thanks'">clike me</p>
+        <script>
+            function changeTwo(x){
+                x.innerHTML="Ooops!";
+            }
+            function changeThree(){
+                document.getElementById("three").innerHTML="Ooops!";
+            }
+            //add an event "onclik" to the element
+            //it's like adding an action to the object
+            document.getElementById("four").onclick=changeFour;
+            function changeFour(){
+                this.innerHTML="Ooops!";
+            }
+            
+            function checkCookies(){
+                var text="";
+                if(navigator.cookieEnabled === true){
+                    text = "Cookies are enabled";
+                }else{
+                    text = "Cookies are not enabled";
+                }
+                document.getElementById("demo").innerHTML=text;
+            }
+            function toUpperCase(){
+                var x = document.getElementById("inputtext");
+                x.value = x.value.toUpperCase();
+            }
+            function mymessage() {
+                alert("This message was triggered from the onload event");
+            }
+        </script>
+    </body>
+</html>
