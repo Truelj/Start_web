@@ -1,0 +1,158 @@
+/*
+Date:11/18/2015
+Author: Jessie
+This is the new css file for home.html
+fix:
+    alignment of form controllers
+    select arrow
+*/
+/*
+The structure of search
+           div .search
+                form
+                    input .date
+                    select .time
+                    select .am_pm
+                    select .num_people
+                    input .query
+                    input .submit
+*/
+
+.home{
+    position:absolute;
+    width:100%;
+    height:600px;
+    /*background-color:green;*/
+    background-image: url(../assets/welcome.jpeg);
+    text-align: center;
+
+}
+
+/*fit the search bar to exactly to the center of the box*/
+.search{
+    height: 10%;
+    width:68%;
+    position: absolute;
+    left:16%;
+    right:16%;
+    top:45%;
+    bottom:45%;
+    /*margin-left: auto;
+    margin-right:auto;*/
+
+}
+/*Align all controls*/
+input, select{
+    height:100%;
+    text-align: left;
+    padding-right:20px;
+    padding-left: 20px;
+    float:left;
+    clear:none;
+    border-top-width: 0;
+    border-left-width:0;
+    border-bottom-width: 0;
+    border-right-width:1px;
+    border-color:rgba(0,0,0,0.1);
+    font-family:Arial, Verdana, Sans-serif;
+    font-size:100%
+}
+.date, .query{
+    padding-top:0px;
+    padding-bottom:0px;
+    /*set height to 58px for firefox*/
+    /*height:58px;*/
+}
+
+.date{
+    width:14%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius:5px;
+
+}
+.query{
+    width:30%
+}
+
+form{
+    width:100%;
+    height:100%;
+}
+
+select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    text-indent:1px;
+    text-overflow:'';
+    background-image: url(../assets/arrow_down_small.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+
+}
+select::-ms-expand {
+    display: none;
+
+}
+
+.submit{
+    width:18%;
+    padding-left:10px;
+    padding-right:10px;
+    font-size:110%;
+    background-color: #b8222d;
+    border:none;
+    color: #fff;
+    transition: background-color 300ms ease-out;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

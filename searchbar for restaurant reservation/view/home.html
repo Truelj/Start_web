@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>restaurant search bar</title>
+    <!--add a stylesheet to the home_search-->
+    <link rel="stylesheet" type="text/css" href="new_home.css">
+
+</head>
+<body>
+<div class="home">
+    <!--
+    Next is the clean search bar
+    with no JS code inserted
+    pure HTML and CSS
+    -->
+    <div class="search">
+        <form> <!--form controls live inside form-->
+            <!--add the calendar to the first serach area-->
+            <input class="date" placeholder="Reservation Date" type="text"/>
+
+            <!--add the options for time select-->
+
+            <select class="time" name="select" ng-model="query_hour">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+
+            <!--add the options for am/pm select-->
+
+                <select class="am_pm" name="select" ng-model="am_pm">
+                <option value="AM">AM</option>
+                <option value="PM" selected>PM</option>
+                </select>
+
+            <!--add the options for number of people-->
+
+                <select class="num_people" name="select" ng-model="num_people">
+                    <option value="1" selected>1 Person</option>
+                    <option value="2">2 Persons</option>
+                    <option value="3">3 Persons</option>
+                    <option value="4">4 Persons</option>
+                    <option value="5">5 Persons</option>
+                    <option value="6">6 Persons</option>
+                    <option value="7">7 Persons</option>
+                    <option value="8">8 Persons</option>
+                </select>
+
+            <!--add the text field for restaurant name, cuisine type, or location-->
+            <input  class="query" type="text"  placeholder="Name, Cuisine or Location" ng-model="query" />
+            <input class="submit" type="submit" value="Make a reservation" ng-click="search()"/>
+
+            </ul>
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>
