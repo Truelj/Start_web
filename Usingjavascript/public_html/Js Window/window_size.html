@@ -1,0 +1,32 @@
+<!--
+Date: 2015/11/20
+Author: Jie Li
+Objective:
+    - Apply Window object to determine the size of the browser window-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM</title>
+</head>
+<body>
+<body>
+
+<p id="demo"></p>
+
+<script>
+    var w = window.innerWidth
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+
+    var h = window.innerHeight
+            || document.documentElement.clientHeight
+            || document.body.clientHeight;
+
+    var x = document.getElementById("demo");
+    x.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+</script>
+
+</body>
+</body>
+</html>
