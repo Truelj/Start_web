@@ -10,21 +10,49 @@ fix:
 The structure of search
            div .search
                 form
-                    input .date
-                    select .time
-                    select .am_pm
-                    select .num_people
-                    input .query
-                    input .submit
+                    input .search_date
+                    select .search_time
+                    select .search_am_pm
+                    select .search_num_people
+                    input .search_query
+                    input .search_submit
 */
 
 .home{
     position:absolute;
     width:100%;
-    height:600px;
+    height:100%;
     /*background-color:green;*/
-    background-image: url(../assets/welcome.jpeg);
+    background: url(../assets/welcome.jpeg) no-repeat center center fixed;
     text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+.welcome{
+    position:absolute;
+    height:10%;
+    font-size:300%;
+    width:68%;
+    left:16%;
+    right:16%;
+    color: #b8222d;
+    top:25%;
+    font-family: Verdana, Sans-serif;
+
+}
+.start{
+    color:white;
+    position:absolute;
+    top:35%;
+    left:16%;
+    right:16%;
+    width:68%;
+    height:10%;
+    font-size:250%;
+    font-family:Arial, Verdana, Sans-serif;
 
 }
 
@@ -42,7 +70,7 @@ The structure of search
 
 }
 /*Align all controls*/
-input, select{
+.search_date, .search_time, .search_am_pm, .search_num_people, .search_query, .search_submit{
     height:100%;
     text-align: left;
     padding-right:20px;
@@ -53,25 +81,26 @@ input, select{
     border-left-width:0;
     border-bottom-width: 0;
     border-right-width:1px;
-    border-color:rgba(0,0,0,0.1);
+    border-color:rgba(0,0,0,0.3);
     font-family:Arial, Verdana, Sans-serif;
-    font-size:100%
+    font-size:18px;
+    box-sizing:border-box;
 }
-.date, .query{
+.search_date, .search_query{
     padding-top:0px;
     padding-bottom:0px;
     /*set height to 58px for firefox*/
     /*height:58px;*/
 }
 
-.date{
-    width:14%;
+.search_date{
+    width:16%;
     border-top-left-radius: 5px;
     border-bottom-left-radius:5px;
 
 }
-.query{
-    width:30%
+.search_query{
+    width:35%;
 }
 
 form{
@@ -79,7 +108,7 @@ form{
     height:100%;
 }
 
-select{
+.search_time, .search_am_pm, .search_num_people{
     -moz-appearance: none;
     -webkit-appearance: none;
     text-indent:1px;
@@ -89,22 +118,25 @@ select{
     background-repeat: no-repeat;
 
 }
-select::-ms-expand {
+.search_time, .search_am_pm, .search_num_people::-ms-expand {
     display: none;
 
 }
 
-.submit{
-    width:18%;
+.search_submit{
     padding-left:10px;
     padding-right:10px;
     font-size:110%;
-    background-color: #b8222d;
+    background-color: #da3743;
     border:none;
     color: #fff;
     transition: background-color 300ms ease-out;
     border-top-right-radius:5px;
     border-bottom-right-radius:5px;
+    text-align: center;
+}
+.search_submit:hover{
+    background-color: #b8222d;
 }
 
 

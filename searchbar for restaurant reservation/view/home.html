@@ -9,19 +9,22 @@
 </head>
 <body>
 <div class="home">
+    <!-- Welcome message-->
+    <div class="welcome"><b>Welcome to TableTop</b></div>
+    <div class="start">Start to make a reservation</div>
     <!--
-    Next is the clean search bar
+     Next is the clean search bar
     with no JS code inserted
     pure HTML and CSS
     -->
     <div class="search">
         <form> <!--form controls live inside form-->
             <!--add the calendar to the first serach area-->
-            <input class="date" placeholder="Reservation Date" type="text"/>
+            <input class="search_date" placeholder="Reservation Date" type="text"/>
 
             <!--add the options for time select-->
 
-            <select class="time" name="select" ng-model="query_hour">
+            <select class="search_time" name="select" ng-model="query_hour">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -38,14 +41,14 @@
 
             <!--add the options for am/pm select-->
 
-                <select class="am_pm" name="select" ng-model="am_pm">
+                <select class="search_am_pm" name="select" ng-model="am_pm">
                 <option value="AM">AM</option>
                 <option value="PM" selected>PM</option>
                 </select>
 
             <!--add the options for number of people-->
 
-                <select class="num_people" name="select" ng-model="num_people">
+                <select class="search_num_people" name="select" ng-model="num_people">
                     <option value="1" selected>1 Person</option>
                     <option value="2">2 Persons</option>
                     <option value="3">3 Persons</option>
@@ -57,8 +60,8 @@
                 </select>
 
             <!--add the text field for restaurant name, cuisine type, or location-->
-            <input  class="query" type="text"  placeholder="Name, Cuisine or Location" ng-model="query" />
-            <input class="submit" type="submit" value="Make a reservation" ng-click="search()"/>
+            <input  class="search_query" type="text"  placeholder="Name, Cuisine or Location" ng-model="query" />
+            <input class="search_submit" type="submit" value="Reserve a Table" ng-click="search()"/>
 
             </ul>
         </form>
