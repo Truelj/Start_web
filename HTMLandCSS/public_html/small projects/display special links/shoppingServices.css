@@ -1,0 +1,39 @@
+/*
+put the block in the center
+*/
+div{
+    margin:auto;
+    width:960px;
+}
+/*
+remove the list marker
+*/
+ul{
+    list-style-type:none;
+    padding:0px;
+    margin:0px;
+}
+li{
+    float:left;
+    margin-right:80px;
+    padding-left:40px;
+    width:120px;
+}
+/*
+remove the line under the link
+*/
+.shopping_service:link{
+    text-decoration: none;
+}
+.shopping_service:visited{
+    text-decoration: none;
+}
+.shopping_service:hover{
+    color:grey;
+}
+.shopping_service:active{
+    text-decoration: none;
+}
+.shopping_service{
+    color:black;
+}
