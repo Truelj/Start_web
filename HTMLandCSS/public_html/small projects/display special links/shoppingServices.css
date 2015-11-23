@@ -1,4 +1,10 @@
 /*
+This style sheet is created
+    - to practice placing a vertical list as a horizontal list
+    - to understand the inheritance of width from the parent element
+    - to play with pudding, content width and margin.
+
+/*
 put the block in the center
 */
 div{
@@ -12,12 +18,28 @@ ul{
     list-style-type:none;
     padding:0px;
     margin:0px;
+    text-transform: uppercase;
+    font-size:90%
 }
 li{
+    /*make sure that margin + content width + padding = 240 px*/
     float:left;
-    margin-right:80px;
-    padding-left:40px;
-    width:120px;
+    margin-right:50px;
+    width:188px;/*Specify the width for the content, excluding padding and margin*/
+    height:60px;
+    border:1px solid rgb(232, 232, 232);
+}
+a{
+    /*inherit the width value, including padding, margin, and content width, from <li>
+        max content width = inherited width - padding width - margin width
+        in thi case, it is: max content width = 188px - 50px - 15px
+        if you specify the width for <a>, its content will occupy as far as possible.
+    */
+    padding-left:50px;
+    float:left;
+    height:40px;
+    margin-left:15px;
+    margin-top:10px;
 }
 /*
 remove the line under the link
@@ -29,6 +51,7 @@ remove the line under the link
     text-decoration: none;
 }
 .shopping_service:hover{
+    text-decoration: none;
     color:grey;
 }
 .shopping_service:active{
@@ -36,4 +59,26 @@ remove the line under the link
 }
 .shopping_service{
     color:black;
+}
+#store{
+    background-image: url("icons/near_store.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+
+}
+#shipping{
+    background-image: url("icons/shipping.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+#discount{
+    background-image: url("icons/student_discount.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+#gift_card{
+    background-image: url("icons/gift_card.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    width:60px;
 }
