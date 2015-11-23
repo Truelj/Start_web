@@ -35,7 +35,7 @@
       <file leaf-file-name="shoppingServices.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_html/small projects/display special links/shoppingServices.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.407279">
+            <state vertical-scroll-proportion="0.41373238">
               <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
               <folding />
             </state>
@@ -73,10 +73,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="162" />
-    <option name="y" value="145" />
+    <option name="x" value="462" />
+    <option name="y" value="234" />
     <option name="width" value="1378" />
-    <option name="height" value="744" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -208,7 +208,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../csc648_mycopy/f15g16" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -282,7 +282,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="162" y="145" width="1378" height="744" extended-state="0" />
+    <frame x="462" y="234" width="1378" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2496329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -350,7 +350,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/small projects/display special links/shoppingServices.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.407279">
+        <state vertical-scroll-proportion="0.41373238">
           <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
           <folding />
         </state>
