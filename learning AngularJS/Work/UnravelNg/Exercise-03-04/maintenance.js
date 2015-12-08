@@ -3,9 +3,9 @@
   .controller('mainCtrl', MainCtrl)
   .controller('locationsCtrl', LocationsCtrl)
   .controller('sitesCtrl', SitesCtrl)
-  .factory('currentSpot', currentSpot)
-  .config(function ($routeProvider) {
-    $routeProvider.when('/locations', {
+  .factory('currentSpot', currentSpot)//a funciton of Angular module. For registering a service in the module
+  .config(function ($routeProvider) {//$routeProvider maps a URL to a view(route)
+    $routeProvider.when('/locations', { //route name, and route table entry
       templateUrl: 'views/locations.html',
       controller: 'locationsCtrl'
     });
@@ -19,6 +19,7 @@
     });
   });
 
+// implement the currentSpot service
 function currentSpot() {
   var activeMenuId = '';
   var titleText = '';
@@ -36,7 +37,7 @@ function currentSpot() {
     }
   }
 }
-
+//AdminCtrl controls  the title bar and the view content
 function AdminCtrl($scope, currentSpot) {
   $scope.isActive = isActive;
   $scope.getTitle = getTitle;
@@ -52,7 +53,7 @@ function AdminCtrl($scope, currentSpot) {
 
 
 function MainCtrl(currentSpot) {
-  currentSpot.setCurrentSpot('', '')
+  currentSpot.setCurrentSpot('', '') // By default
 }
 
 function LocationsCtrl(currentSpot) {

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="stupid">
+<head>
+  <meta charset="UTF-8">
+  <title>Using ng-href</title>
+</head>
+<body ng-controller="smartController">
+<h>So I want to check out working with ng-href</h></h1>
+<ul>
+  <li><a ng-href="{{one}}"> 1</a></li>
+  <li>2</li>
+  <li><a ng-href="#three">3</a></li>
+</ul>
+<div>
+  This is part 1
+</div>
+<div>
+  This is part 2
+</div>
+<div id="three">
+  This is part 3
+</div>
+<script src="angular.min.js"></script>
+<script>
+  angular.module('stupid',[])
+    .controller('smartController', smartController);
+  function smartController($scope){
+    $scope.one = 'https://www.google.com';
+    $scope.two = 'https://www.google.com';
+    $scope.three = 'https://www.google.com';
+
+  }
+</script>
+</body>
+</html>
