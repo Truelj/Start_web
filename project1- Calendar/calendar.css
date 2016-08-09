@@ -1,0 +1,98 @@
+/* This is a style sheet for calendar.html */
+body{
+	text-align: center;
+	max-width: 1280px;
+	min-width: 960px;
+	font-family: serif;
+	color: #808080;
+}
+h1{
+	width: 100%;
+	font-family: fantasy,cursive;
+	color: black;
+
+}
+table{
+	width:80%;
+	margin:auto;
+
+}
+th, td{
+	height:50px;
+	width: 10%;
+	
+}
+
+.priority1{
+	background: #FFC0CB;
+}
+#Monday_priority1, #Tuesday_priority1, #Wednesday_priority1,
+#Thursday_priority1, #Friday_priority1,#Saturday_priority1,
+#Sunday_priority1{
+	background: #FFC0CB;
+}
+.priority2{
+	background: #FFFAFA;
+}
+#Monday_priority2, #Tuesday_priority2, #Wednesday_priority2,
+#Thursday_priority2, #Friday_priority2,#Saturday_priority2,
+#Sunday_priority2{
+	background: #FFFAFA;
+}
+.priority3{
+	background-color: #FFFAFA;
+}
+#Monday_priority3, #Tuesday_priority3, #Wednesday_priority3,
+#Thursday_priority3, #Friday_priority3,#Saturday_priority3,
+#Sunday_priority3{
+	background: #FFFAFA;
+}
+.total{
+	background: #FFF5EE;
+}
+.feel{
+	background: #FDF5E6;
+
+}
+#mylinks{
+	position: relative;
+    left: 32%;
+}
+button{
+	position: relative;
+    left: 5%;
+    width: 5%;
+    font-size: medium;
+    border-radius: 5px;
+    border-width: 1px;
+    /* border: 1px; */
+    border-style: double;
+    color: grey;
+    border-color: grey;
+    background: white;
+}
+#text{
+	width:80%;
+	position: relative;
+	left:10%;
+
+}
+#text form{
+	width:99%;
+}
+#mytextarea{
+	width:100%;
+	font-size:medium;
+	color: #808080;
+	border-color: #808080;
+	border-radius:5px;
+}
+#history{
+	width: 80%;
+    position: relative;
+    left: 10%;
+}
+#history h3{
+	font-family: fantasy,cursive;
+	color: black;
+}

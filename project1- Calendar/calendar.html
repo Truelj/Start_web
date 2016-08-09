@@ -1,0 +1,121 @@
+<!-- This is a webpage that I used to show my week calendar-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calendar</title>
+		<link href="calendar.css" type="text/css" rel="stylesheet">
+		
+	</head>
+	<body onload = "window_onload();">
+		<h1>Life is to make everyday remarkable</h1>
+		<table id = "mytable">
+			<tr>
+				<th></th>
+				<th >Monday</th>
+				<th >Tuesday</th>
+				<th >Wednesday</th>
+				<th >Thursday</th>
+				<th >Friday</th>
+				<th >Saturday</th>
+				<th >Sunday</th>
+			</tr>
+			<tr class="priority1">
+				<th>Priority 1</td>
+				<td onclick="td_onclick(this)" name = "Monday_priority1"></td>
+				<td onclick="td_onclick(this)" name = "Tuesday_priority1"></td>
+				<td onclick="td_onclick(this)" name = "Wednesday_priority1"></td>
+				<td onclick="td_onclick(this)" name = "Thursday_priority1"></td>
+				<td onclick="td_onclick(this)" name = "Firday_priority1"></td>
+				<td onclick="td_onclick(this)" name = "Saturday_priority1"></td>
+				<td onclick="td_onclick(this)" name = "Sunday_priority1"></td>
+			</tr>
+			<tr class="priority2">
+				<th>Priority 2</td>
+				<td onclick="td_onclick(this)" name = "Monday_priority2"></td>
+				<td onclick="td_onclick(this)" name = "Tuesday_priority2"></td>
+				<td onclick="td_onclick(this)" name = "Wednesday_priority2"></td>
+				<td onclick="td_onclick(this)" name = "Thursday_priority2"></td>
+				<td onclick="td_onclick(this)" name = "Friday_priority2"></td>
+				<td onclick="td_onclick(this)" name = "Saturday_priority2"></td>
+				<td onclick="td_onclick(this)" name = "Sunday_priority2"></td>
+			</tr>
+			<tr class="priority3">
+				<th>Priority 3</td>
+				<td onclick="td_onclick(this)" name = "Monday_priority3"></td>
+				<td onclick="td_onclick(this)" name = "Tuesday_priority3"></td>
+				<td onclick="td_onclick(this)" name = "Wednesday_priority3"></td>
+				<td onclick="td_onclick(this)" name = "Thursday_priority3"></td>
+				<td onclick="td_onclick(this)" name = "Friday_priority3"></td>
+				<td onclick="td_onclick(this)" name = "Saturday_priority3"></td>
+				<td onclick="td_onclick(this)" name = "Sunday_priority3"></td>
+			</tr>
+			<tr class="tatal">
+				<th>Total</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="feel">
+				<th>I feel...</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<div id = "text">
+			<p id = "sticker"></p>
+			<form action="" name="myform">
+				<textarea onchange="textarea_onchange()" id="mytextarea" rows="10" name="mytextarea" placeholder="What to do..." ></textarea>
+
+			</form>
+		</div>
+		<div id = "mylinks">
+			<button onclick="savetohistory_onclick()"> save </button>
+			
+			
+		</div>
+		<div id="history">
+			<h3>My history</h3>
+			<p>In this week, you've done<span> 25 </span>jobs</p>
+			<div id="records">
+				<!--added later-->
+				<!--
+				<div id ="1">
+					<div id = "Monday">
+						<h4>Monday</h4>
+						<div id = "Monday_priority1">
+							<p>Going to Trader Joe's to buy food</p>
+						</div>
+						<div id = "Monday_priority2">
+							<p>Eat with my doggy</p>
+						</div>
+					</div>
+				</div>
+				<div id ="2">
+					<div id = "Tuesday">
+						<h4>Tuesday</h4>
+						<div id = "Tuesday_priority1">
+							<p>Going to Trader Joe's to buy food</p>
+						</div>
+						<div id = "Tuesday_priority2">
+							<p>Eat with my doggy</p>
+						</div>
+					</div>
+				</div>
+				-->
+				<!--end-->
+
+			</div>
+		</div>
+		</body>
+		<script type="text/javascript" src="calendar.js"></script>
+	</body>
+</html>

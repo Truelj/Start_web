@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example 2 page a</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+		function btnShowVisited_onclick(){
+			document.form1.txtaPagesVisited.value = parent.returnPagesVisited();
+		}
+		function window_onload(){
+			var currentlocation = window.location;
+			var currentloactionurl = currentlocation.href;
+			var windowparent = window.parent;
+			alert(windowparent);
+			if(windowparent != null){
+				windowparent.addPage(currentlocationurl);
+			}else{
+				alert("parent is null");
+			}
+			
+		}
+
+	</script>
+</head>
+<body onload="window_onload()" >
+	<script type="text/javascript">
+		alert("current window/frame name: "+ window.name);
+	</script>
+	<h2>This is page a</h2>
+	<p>
+		<a href="a.html"> page a </a>
+		<a href="b.html"> page b </a>
+		<a href="c.html"> page c </a>
+		<a href="d.html"> page d </a>
+	</p>
+	<form name="form1" action="">
+		<textarea rows="10" cols="35" name="txtaPagesVisited"></textarea>
+		<br/>
+		<input type="button" value="List Pages Visited" name="btnShowVisited" onclick="btnShowVisited_onclick()"/>
+	</form>
+</body>
+</html>

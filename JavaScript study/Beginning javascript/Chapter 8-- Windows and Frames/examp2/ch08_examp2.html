@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 8: Example 2</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+		var pagesVisited = new Array();
+		function returnPagesVisited(){
+			var returnValue =  "So far you have visited the following pages\n";
+			var pageVisitedIndex;
+			for(pageVisitedIndex in pagesVisited){
+				returnValue = returnValue + pagesVisited[pageVisitedIndex] + "\n";
+			}
+			return returnValue;
+		}
+		function addPage(fileName){
+			var fileNameStart = fileName.lastIndexOf('/')+ 1;
+			fileName = fileName.substr(fileNameStart);
+			pagesVisited[pagesVisited.length] = fileName;
+
+			return true;
+		}
+	</script>
+</head>
+<frameset cols="50%, *">
+	<frame name="fraLeft" src="a.html"></frame>
+	<frame name="fraRight" src="b.html"></frame>
+</frameset>
+<body>
+
+</body>
+</html>

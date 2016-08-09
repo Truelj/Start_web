@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doggy go!!!</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#dog_image1{
+			width: 10%;
+			position: absolute;
+			left:10px;
+			top:10px;
+		}
+		#dog_image2{
+			width: 10%;
+			position: absolute;
+			right:10px;
+			top:10px;
+		}
+	</style>
+
+</head>
+<body onload = "window_onload()">
+	<image src="image/1.jpeg" id = "dog_image1" />
+	<image src="image/2.jpeg" id="dog_image2" />
+	<script type="text/javascript">
+		var left = document.getElementById("dog_image1");
+		var right = document.getElementById("dog_image2");
+		var left_newleft;
+		var right_newleft;
+		function moveleft(){
+			//alert("move left call");
+			//move object to the left
+				//move left to right
+				left_newleft = left.offsetLeft + 100;
+				left.style.left = left_newleft + "px";
+				//move right to left
+				right_newleft = right.offsetLeft - 100;
+				right.style.left = right_newleft + "px";
+			
+			//check 
+			//alert("left:"+ left.style.left + "right"+right.style.left);
+			if (left.offsetLeft > 900){
+				var temp = left;
+				left = right;
+				right = temp;
+
+			}	
+		}
+		function window_onload(){
+			setInterval(moveleft, 300);
+		}
+	</script>
+</body>
+</html>

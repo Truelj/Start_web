@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>drag the title</title>
+	<script type="text/javascript" src="DraggingElements.js"></script>
+	<script type="text/javascript" src="getScrollOffsets.js"></script>
+	<!-- The element to be dragged -->
+	<div style ='position:absolute; left:100px; top:100px;width:250px;
+				background-color: white; border:solid black;'>
+		<!-- The "titlebar" to drag it with. Note the onmousedown attribute. -->
+		<div style="background-color: gray; border-bottom:dotted black;
+				padding:3px; font-family: sans-serif; font-weight:bold;"
+			 onmousedown="drag(this.parentNode, event);" >
+			 Drag Me
+		</div>
+		<p> This is a test. Testing, testing, testing. </p>
+		<p> Test</p>
+		<p> Test</p>
+	</div>
+</head>
+<body>
+
+</body>
+</html>

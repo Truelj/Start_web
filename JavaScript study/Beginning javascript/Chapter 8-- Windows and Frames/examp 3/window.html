@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exampl 4</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var detailsWindow;
+		function showDetails(bookURL){
+			detailsWindow = window.open(bookURL, "bookDetails", "width=400,height=350");
+			detailsWindow.focus();
+		}
+	</script>
+</head>
+<body>
+	<h2>Online Book Buyer</h2>
+	<p>	Click any of the images below for more details</p>
+	<h4>Professional Ajax</h4>
+	<p>
+		<image src="ring.png" alt="Professional Ajax"  border = "0" onclick="showDetails('ajax.html')"/>
+	</p>
+</body>
+</html>

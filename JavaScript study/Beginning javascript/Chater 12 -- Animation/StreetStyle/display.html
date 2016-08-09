@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display street style</title>
+	<script type="text/javascript">
+		//function definition
+		function alter_image(){
+			//get a random number btw 0 and 10
+			var number = Math.round(Math.random() * 10);
+			//get the randomly different image
+			var new_image = "image/street style/"+number+".jpg";
+			while(window.document.images["img1"].src == new_image){
+				number = Math.round(Math.random() * 10);
+				new_image="image/street style/"+number+".jpg";
+			}
+			window.document.images["img1"].src = new_image;
+
+			return false;
+		}
+		//function definition
+		function alter_image_two(that){
+			//get a random number btw 0 and 10
+			var number = Math.round(Math.random() * 10);
+			//get the randomly different image
+			var new_image = "image/street style/"+number+".jpg";
+			while(that.src == new_image){
+				number = Math.round(Math.random() * 10);
+				new_image="image/street style/"+number+".jpg";
+			}
+			that.src = new_image;
+
+			return false;
+		}
+	</script>
+</head>
+<body>
+	<img src="image/street style/0.jpg" alt="fashion" width=25% name="img1">
+	<img src="image/street style/1.jpg" alt="fashion" width=25% name="img2" onclick="alter_image_two(this)">
+	<script type="text/javascript">
+		window.document.images["img1"].onclick = alter_image;
+	</script>
+</body>
+</html>

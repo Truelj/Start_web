@@ -1,0 +1,19 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 7: Example 2</title>
+	<script type="text/javascript">
+		var numberOfClicks = 0;
+		function myButton_onclick(){
+			numberOfClicks++;
+			document.form1.myButton.value = "Button clicked " + numberOfClicks + "times";
+		}
+	</script>
+</head>
+<body>
+	<form action="" name="form1">
+		<input type="button" name="myButton" value = "Button clicked 0 times"
+		onclick="myButton_onclick()" />
+	</form>
+</body>
+</html>

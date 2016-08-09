@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src = "CustomerBooking.js"></script>
+	<script type="text/javascript" src = "Cinema.js"></script>
+	<title> Cinema Tickets</title>
+</head>
+<body>
+	<h2>Summary of bookings</h2>
+	<div>
+	<script type="text/javascript">
+		var LondonCinema = new Cinema();
+		LondonCinema.addBooking(1, "Arnold Palmer", "Toy Story", "15 July 2009 20:15");
+		LondonCinema.addBooking(2, "Arnold Palmer", "Toy Story", "15 July 2009 20:15");
+		LondonCinema.addBooking(3, "Arnold Palmer", "Toy Story", "15 July 2009 20:15");
+		LondonCinema.addBooking(4, "Arnold Palmer", "Toy Story", "15 July 2009 20:15");
+
+		document.write(LondonCinema.getBookingsTable());
+
+	</script>
+	</div>
+</body>
+</html>

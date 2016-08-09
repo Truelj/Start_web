@@ -1,0 +1,20 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 7 : Example 3</title>
+	<script type="text/javascript">
+		function myButton_onmouseup(){
+			document.form1.myButton.value = "Mouse Goes Up";
+		}
+		function myButton_onmousedown(){
+			document.form1.myButton.value = "Mouse Goes Down";		}
+	</script>
+</head>
+<body>
+	<form action="" name="form1">
+		<input type="button" name="myButton" value="Mouse Goes Up"
+			onmouseup="myButton_onmouseup()"
+			onmousedown="myButton_onmousedown()" />
+	</form>
+</body>
+</html>
