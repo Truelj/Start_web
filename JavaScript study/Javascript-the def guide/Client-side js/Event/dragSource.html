@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A drag source</title>
+        <meta charset="UTF-8"/>
+        <script src="whenReady.js"></script>
+        <script>
+            whenReady(function(){
+                var clock = document.getElementById("clock");
+                var icon = new Image();
+                icon.src = "1.jpg";
+
+                //Display the time once every minute
+                function displayTime(){
+                    var now = new Date();
+                    var hrs = now.getHours(), mins = now.getMinutes();
+                    if(mins<10) mins = "0" + mins;
+                    clock.innerHTML = hrs + ":" + mins;
+                    setTimeout(displayTime, 60000); //run again in 1 minute
+                }
+
+                displayTime();
+
+                //Make the clock draggable
+                //We can also do this with an HTML attribute: <span draggable="true">...
+                clock.draggable = true;
+
+                //set up drag event handlers
+                clock.ondragstart = function(event){
+                    var event = event||window.event;
+
+                    //The dataTransfer property is key to the drag-and-drop API
+                    var dt = event.dataTransfer;
+                    //The Date() constructor used as a function returns a timestamp string
+                    //dt.setData("Text", Date() + "\n");
+                    dt.setData("Text", clock.innerText);
+                    //Tell the browser to drag our icon to represent the timestamp, in
+                    //browsers that support that. Without this line, the browser may use
+                    //an image of the clock text as the value to drag.
+                    if(dt.setDragImage) dt.setDragImage(icon, 0, 0);
+                    console.log(dt.effectAllowed);//uninitilized
+                };
+            });
+        </script>
+        <style>
+            #clock {
+                font:bold 24pt sans;
+                background:#ddf;
+                padding:10px;
+                border:solid black 2px;
+                border-radius:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Drag timestamps from the clock</h1>
+        <!-- The time is displayed here-->
+        <span id="clock"></span>
+        <!-- You can drop timestamps here -->
+        <textarea cols=60 row=20></textarea>
+    </body>
+</html>

@@ -11,7 +11,7 @@ will be invoked immediately.
 */
 
 var whenReady = (function(){
-	var funs =[];
+	var funcs =[];
 	var ready = false;//switch to true when the handler is triggered
 
 	//the event handler invoked when the document becomes ready
