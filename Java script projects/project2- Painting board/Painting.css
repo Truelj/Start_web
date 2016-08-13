@@ -1,0 +1,16 @@
+ul li{
+    width: 40px;
+    background: yellow;
+    height: 40px;
+    float: left;
+    margin: 5px;
+    list-style: none;
+}
+ul{
+    width:500px;
+    height:500px;
+
+}
+body{
+    background-color: black;
+}
