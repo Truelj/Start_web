@@ -1,9 +1,7 @@
 #painting-board li{
-    width: 40px;
     background: yellow;
-    height: 40px;
     float: left;
-    margin: 5px;
+    /*margin: 5px;*/
     list-style: none;
 }
 #painting-board{
@@ -13,5 +11,26 @@
 }
 body{
     background-color: black;
+}
+
+.option1{
+    width:50px;
+    height:50px;
+}
+.option2{
+    width: 25px;
+    height: 25px;
+}
+.option3{
+    width:20px;
+    height:20px;
+}
+.option4{
+    width:10px;
+    height:10px;
+}
+.option5{
+    width:5px;
+    height:5px;
 }
 
