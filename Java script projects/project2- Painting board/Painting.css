@@ -1,4 +1,4 @@
-ul li{
+#painting-board li{
     width: 40px;
     background: yellow;
     height: 40px;
@@ -6,7 +6,7 @@ ul li{
     margin: 5px;
     list-style: none;
 }
-ul{
+#painting-board{
     width:500px;
     height:500px;
 
@@ -14,3 +14,4 @@ ul{
 body{
     background-color: black;
 }
+
