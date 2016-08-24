@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PermaNote Editor</title>
+    <script src="permanote.js"></script>
+    <style>
+        #editor {
+            width: 10%; height: 250px;
+        }
+        #statusline{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="toolbar">
+        <button id="savebutton" onclick="save()">save</button>
+        <button onclick="sync()">Sync Note</button>
+        <button onclick="applicationCache.update()">Update APplication</button>
+    </div>
+    <textarea id="editor"></textarea>
+    <div id="statusline"></div>
+</body>
+</html>
