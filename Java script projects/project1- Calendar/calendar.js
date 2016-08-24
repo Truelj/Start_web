@@ -9,20 +9,25 @@ var change;
 var currentcell;
 var currentcell_element;
 var save_button = document.getElementsByTagName("button")[0];
-function window_onload(){
+window.onload=function (){
 	//hide the text div
 	text_div.style.display = "none";
 	//hide the history div
 	history_div.style.display = "none";
 	change = false;
-	currentcell = "";
-	currentcell_element=null;
+	currentcell = "";// store the name of the current cell, e.g "Monday_priority1".
+	currentcell_element=null; //store the the current element that the user clicks on
 	save_button.style.display = "none";
 
 }
 
-function td_onclick(that){
-
+//invoked when the user clicks on a record cell
+//- save the current cell if there's any change
+//- change the background color of the current cell
+//- update the currentcell's value to the value of nextcell
+//- update the currentcell_element to nextcell
+function td_onclick(nextcell){//nextcell is not an Event object. Because this function would
+                              //be invoked inside another event handler function.
 	if(change == true){
 		//save the record from text area to history
 		var record = text_area.value;
@@ -34,12 +39,12 @@ function td_onclick(that){
 		history_div.style.display = "block";
 	}
 	if(currentcell_element != null){
-		//restore the currentcell backgroud color
-		currentcell_element.style.backgroundColor = that.style.backgroundColor;
+		//restore the current cell's background color
+		currentcell_element.style.backgroundColor = nextcell.style.backgroundColor;
 	}
-	if(currentcell_element != that){
+	if(currentcell_element != nextcell){
 		//get the new cell name
-		currentcell = that.getAttribute("name");
+		currentcell = nextcell.getAttribute("name");
 		//display the message above text area
 		var day = currentcell.substring(0, currentcell.indexOf("_", 0));
 		var priority = currentcell.substr(currentcell.indexOf("_", 0) + 1);
@@ -57,10 +62,10 @@ function td_onclick(that){
 	text_div.style.display = "block";
 	//show the save button below the calendar
 	save_button.style.display = "inline";
-	//set the new cell backgroud color
-	that.style.backgroundColor="beige";
+	//set the new cell background color
+	nextcell.style.backgroundColor="beige";
 	//update the current cell element
-	currentcell_element = that;
+	currentcell_element = nextcell;
 	//update the current cell name
 	currentcell = currentcell_element.getAttribute("name");
 }
@@ -84,13 +89,12 @@ function savetohistory_onclick(){
 }
 
 //declare a new function to save the record to history
-//currentcell is the value of an id like "Monday_priority"
-//record is the plain text 
+//"currentcell" contains the name of the cell, e.g "Monday_priority"
+//"record" contains the text value of the current textarea
 function saveToHistory(currentcell, record){
-	//look for record in history
+	//look for record with id of currentcell is in the history
 	var record_div = document.getElementById(currentcell);
-	//check if that record, with id of currentcell value, exists in the document
-	if(!record_div){
+	if(!record_div){ //the record is not in the document
 		//look for week day in history
 		var index = currentcell.indexOf("_");
 		var weekday = currentcell.substring(0, index);
@@ -99,8 +103,8 @@ function saveToHistory(currentcell, record){
 		//if not, create a div for that day
 		if(!weekday_div){
 			//create a index div
-			index_div = document.createElement('div');
-			index_div.id = getDay(weekday)+ "";
+			var index_div = document.createElement('div');
+			index_div.id = getDay(weekday)+ ""; //assign an id for that day. E.g. "1" for "Monday", "2" for "Tuesday", and so on.
 			//create a new div to store records for that day
 			weekday_div = document.createElement("div");
 			//set id for that div
@@ -109,7 +113,7 @@ function saveToHistory(currentcell, record){
 			var weekday_h = document.createElement("h4");
 			var weekday_name = document.createTextNode(weekday);
 			weekday_h.appendChild(weekday_name);
-			//append heading to weedday div
+			//append heading to weekday div
 			weekday_div.appendChild(weekday_h);
 			//append weekday div to index div
 			index_div.appendChild(weekday_div);
@@ -119,6 +123,7 @@ function saveToHistory(currentcell, record){
 			sortDays(document.getElementById("records"));
 
 		}
+		//If a record for that day exists,
 		//create a record div and set id attribute to currentcell value
 		record_div = document.createElement("div");
 		record_div.id = currentcell;
@@ -137,13 +142,13 @@ function saveToHistory(currentcell, record){
 		sortPriority(weekday_div);
 		alert("success");
 	}else{
-		//overrite the record
-		record_div.firstChild.innerHTML = record;
+		//overwrite the record
+		record_div.firstChild.value = record;
 	}
 
 }
 //to convert the name of the weekday into a number 
-	function getDay(weekday){
+function getDay(weekday){
 		switch(weekday){
 			case "Monday": return 1; 
 			case "Tuesday":return 2;
@@ -199,6 +204,7 @@ function sortPriorities(weekday){
 		weekday.appendChild(copy[i]);
 	}
 }
+
 function sortPriority(weekday){
 	var priority_array = new Array();
 	var next_node = weekday.firstChild;
@@ -218,19 +224,3 @@ function sortPriority(weekday){
 	}
 }
 
-//document.table.tr.td.onclick = td_onclick
-//get an array of table rows and assign it to a new variable
-//if(document.getElementById("mytable") == null){
-//	alert("document.getElementById('mytable') == null");
-//}else{
-//	var table_rows = document.getElementById("mytable").rows;
-//	var row_cells;
-//	for(var i = 0; i < table_rows.length; i++){
-//		//get an array of table cells and assign it to a new variable
-//		row_cells = table_rows[i].cells;
-//		for(var j = 0; j < row_cells.length; j++){
-//			//add the onclick event to each cell
-//			row_cells[j].onclick = td_onclick;
-//		}
-//	}
-//}
