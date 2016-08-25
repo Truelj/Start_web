@@ -6,19 +6,42 @@ var text_div = document.getElementById("text");
 var text_area = document.getElementById('mytextarea');
 var history_div = document.getElementById("history");
 var change;
-var currentcell;
+var currentcell ;
 var currentcell_element;
 var save_button = document.getElementsByTagName("button")[0];
+var jobs;//Integer value
+
+//When the window is loaded, initialize a series of values
 window.onload=function (){
 	//hide the text div
 	text_div.style.display = "none";
-	//hide the history div
-	history_div.style.display = "none";
+    //fetch the value of jobs from local storage
+    jobs = getJobs();
+    if(!jobs){//jobs is NaN
+        jobs = 0;
+    }else{
+        jobs = parseInt(jobs);
+    }
+    //fetch the record from local storage
+    var record = getRecord();
+    if(record === "undefined" || jobs === 0){  //if record is "undefined" or jobs equals to 0, hide the history_div
+        history_div.style.display = "none";
+    }else{
+        //Otherwise, append record to history_div
+        history_div.innerHTML = record;
+    }
+
 	change = false;
 	currentcell = "";// store the name of the current cell, e.g "Monday_priority1".
 	currentcell_element=null; //store the the current element that the user clicks on
 	save_button.style.display = "none";
 
+}
+//save record and jobs to localStorage before leave the current window
+window.onbeforeunload=function(){
+    var record = history_div.innerHTML;
+    saveRecord(record);
+    saveJobs(jobs);
 }
 
 //invoked when the user clicks on a record cell
@@ -141,11 +164,18 @@ function saveToHistory(currentcell, record){
 		//sortPriorities(weekday_div);
 		sortPriority(weekday_div);
 		alert("success");
+        //Increase jobs
+        jobs++;
+        updateJobs();
 	}else{
 		//overwrite the record
 		record_div.firstChild.value = record;
 	}
 
+}
+function updateJobs(){
+    var span = document.getElementById("jobs");
+    span.innerHTML = jobs;
 }
 //to convert the name of the weekday into a number 
 function getDay(weekday){

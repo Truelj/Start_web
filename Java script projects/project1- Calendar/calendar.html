@@ -6,7 +6,7 @@
 		<link href="calendar.css" type="text/css" rel="stylesheet">
 		
 	</head>
-	<body onload = "window_onload();">
+	<body>
 		<h1>Life is to make everyday remarkable</h1>
 		<table id = "mytable">
 			<tr>
@@ -81,7 +81,7 @@
 		</div>
 		<div id="history">
 			<h3>My history</h3>
-			<p>In this week, you've done<span> 25 </span>jobs</p>
+			<p>In this week, you've done <span id ="jobs">0</span> jobs</p>
 			<div id="records">
 				<!--added later-->
 				<!--
@@ -114,5 +114,6 @@
 		</div>
 		</body>
 		<script type="text/javascript" src="calendar.js"></script>
+		<script type="text/javascript" src="localStorage.js"></script>
 	</body>
 </html>
