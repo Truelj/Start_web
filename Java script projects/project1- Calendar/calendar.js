@@ -110,7 +110,7 @@ function savetohistory_onclick(){
  * 	currentcell_name - contains the name of the current cell, e.g "Monday_priority"
  * 	record - contains the text value of the current textarea
  */
-function saveToHistory(currentcell, record){
+function saveToHistory(currentcell_name, record){
 	//look for record with id of currentcell_name is in the history
 	var record_div = document.getElementById(currentcell_name);
 	if(!record_div){ //the record is not in the document
@@ -158,13 +158,17 @@ function saveToHistory(currentcell, record){
 		//sort priorities
 		//sortPriorities(weekday_div);
 		sortPriority(weekday_div);
-		alert("success");
+		//alert("success");
         //Increase jobs
         jobs++;
         updateJobs();
 	}else{
 		//overwrite the record
-		record_div.firstChild.value = record;
+		record_div.firstChild.innerHTML = record;
+		if(record === ""){
+			jobs--;
+			updateJobs();
+		}
 	}
 
 }
@@ -218,7 +222,7 @@ function sortPriorities(weekday){
 	var priorities = weekday.getElementsByTagName('div');
 	//Because priorities is a Nodelist, a read-only dynamic array-like object, get a static copy of it.
 	var copy = Array.prototype.slice.call(priorities, 0); //copy is a true array
-	copy(function(div1, div2){
+	copy.sort(function(div1, div2){
 			var id1 = div1.id;
 			var id2 = div2.id;
 			if(id1 < id2) return -1;

@@ -47,3 +47,4 @@ function logLocalStorage(){
 function clearLocalStorage(){
     localStorage.clear();
 }
+clearLocalStorage();
