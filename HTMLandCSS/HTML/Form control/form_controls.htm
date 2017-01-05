@@ -1,0 +1,47 @@
+<!--
+form_controls.htm
+Created by Jie Li, on Jan 4, 2016
+Test a few of standard form controls as well as some HTML specific form controls
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>form controls</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+  <form action="form_controls.htm" method="get">
+    <fieldset>
+      <legend> Your Details: </legend>
+      <br />
+      <label>
+        Date: <input type="date" name="date"/>
+      </label>
+      <br/>
+      <label>
+        Name:<input type ="text" name="name" required="" /> <br/>
+      </label>
+      <label>
+        Email:<input type ="email" name="email" /> <br/>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend> Your Review: </legend>
+      <label>
+        How did you hear about us?
+        <select name="select">
+          <option value="google"> google </option>
+          <option value="friend"> friend </option>
+        </select>
+      </label>
+      <br/>
+      Would you visit again ? <br/>
+      <label><input type="radio" name="rating" value="yes"> Yes</label>
+      <label><input type="radio" name="rating" value="no"> No</label>
+      <label><input type="radio" name="rating" value="maybe"> Maybe</label>
+      <br/>
+      <input type="submit" value="Submit review"/>
+    </fieldset>
+  </form>
+</body>
+</html>
