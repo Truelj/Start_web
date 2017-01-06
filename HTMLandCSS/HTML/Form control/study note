@@ -1,0 +1,102 @@
+1/4/2017
+- review some basic tags in HTML.
+  Text
+    Structure markup
+    - headings <p> <sub> <sup> <br/> <hr/> <b> <i>
+    Semantic markup //to describe the content of page, not to change the look of page
+    - <em> <abbr> <ins> <del> <s> <address> <blockquote> <q> <dfn>
+
+  List
+    unordered list // with bullet point
+    - <ul> <li>
+    ordered list // using number
+    - <ol> <li>
+    definition list //define something
+    - <dl> <dt> <dd>
+
+  Table
+    <table>
+    <th scope = "">
+    <tr>
+    <td colspan = "", rowspan="">
+    <thead> <tbody> <tfoot> //for long table
+
+  Link
+    Link to another website; absolute path
+    Link to another page on the same website; relative path
+    Link to a specific part of the same page; id
+    Link to a specific part of another page; id followed by path
+    <a href="">
+    <a href="mailto:truelj@hotmail.com">
+
+  Image
+    bitmap format image
+      format: jpeg, gif, png //jpeg for photograph; gif for flat colored illustration
+      use image dimension in terms of pixels
+      image resolution doesn't matter on screen
+    vector format image
+      format: SVG //scalable vector graphics
+      advantages: increase the dimension of image won't affect the image quality
+
+    <img
+      src ="" alt="" title=""
+      width="" height="" align="" //using CSS
+    />
+    <figure>
+      <img />
+      <figcaption> add a description to the image</figcaption>
+    </figure>
+
+  Form
+    <form action="url" method="" id="">
+    Form controls
+      Text
+        text field
+          <input type="text" name="" size="" maxlength="" placeholder=""/>
+        password
+          <input type="password" name="password" size="" maxlength=""/>
+        text area
+          <textarea name="textarea" cols="" rows="" placeholder=""> ... </textarea>
+
+      Choose
+        Radio
+        <input type="radio" name="" value="" checked="checked" />
+        check box
+        <input type="checkbox" name="" value="" checked="checked" multiple="multiple"/>
+        select
+        <select name="">
+          <option value="" selected="selected"> value </option>
+          ...
+        </select>
+
+      Submit
+        text submit button
+        <input type="submit" value="" />
+        image submit button
+        <input type="image" src="" alt="" width="" height=""/>
+        button
+        <button>...</button>
+
+      upload file
+        <input type="file" name="" />
+
+      hidden
+        <input type="hidden" name="" value=""/>
+
+  Grouping field set
+    <fieldset>
+      <legend></legend>
+      ...
+    </fieldset>
+    
+  HTML5 form controls
+    input validation
+    <input required="">
+    date
+    <input type="date"/>
+    search
+    <input type="search" name="search"/>
+    email
+    <input type="email" name="email"/>
+    url
+    <input type="url" name="website" />
