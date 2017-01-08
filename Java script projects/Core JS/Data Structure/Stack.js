@@ -38,6 +38,13 @@ Stack.prototype.pop = function(){
     return data;
   }
 };
+Stack.prototype.peek = function(){
+  if(this.isEmpty()){
+    throw new Error("stack is empty");
+  }else{
+    return this.top.data;
+  }
+}
 
 Stack.prototype.isEmpty = function(){
   if(this.currentLength === 0){
@@ -65,7 +72,7 @@ Stack.prototype.toString = function(){
   }
   return returnString;
 };
-//test
+//test push()
 //create a stack of length 10;
 var stack1 = new Stack(10);
 //add digit 0 - 9 to stack1
@@ -81,7 +88,14 @@ for(var i = 0; i < 11; i++){
 //print the stack
 console.log(stack1.toString());//shoulde be 9 8 7 ....1 0
 
-//try pop
+//try peek()
+try{
+  console.log(stack1.peek());//9
+}catch(error){
+  console.log(error);
+}
+
+//try pop()
 for(i = 0; i < 11; i++){
   try{
     stack1.pop();
@@ -92,3 +106,11 @@ for(i = 0; i < 11; i++){
 }
 //print the stack
 console.log(stack1.toString());//shoulde be nothing
+
+//try peek()
+//try peek()
+try{
+  stack1.peek();
+}catch(error){
+  console.log(error);
+}
