@@ -1,0 +1,43 @@
+1/4/2016
+Flash, Video and Audio
+How to insert animation into a webpage?
+  Using Flash
+    - Flash Authoring environment
+      during which, you could create flash animations and flash players.
+    - Flash movies
+      Flash animations and media players are all called flash movies when they're used online
+    - .fla
+    They're saved with the .fla file extension when they're created in the flash
+    authoring environment
+    - .swf
+    but in order to use them on a website, they need to be converted into another format Known
+    as SWF, which has a .swf file extension.
+    - Flash Player
+    To view Flash media, the browser need to use a plugin called Flash Player
+    - Add Flash movies to the webpage
+    By using Javascript, you can add the Flash movie to the webpage.
+
+  Using Javascript to create animation effect
+
+How to insert Video into a webpage?
+  Using Flash
+    - Convert any video into .flv format (or H264, some flash video player support it)
+    - Flash video player
+    - Add Flash video and player to the webpage by using JavaScript
+
+  Using HMTL5 <video>
+    - Each browser requires different formats for video files.
+    In general,
+    IE and Safari: H264(MP4).
+    Android, Chrome, Firefox, Opera: WebM
+
+  Use a Hosted Service like Youtube
+
+Howe to insert Audio into a webpage?
+  Using Flash MP3 players
+    - only support MP3 files
+  Using HTML5 <Audi0>
+    - Each browser requires different formats for audio files
+    In general,
+    Chrome 6+, IE9, Safari 5+: MP3. 
+    Firefox3.6, chrome 6, Opera 1.5: Ogg Vorbis (.ogg)
