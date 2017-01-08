@@ -19,6 +19,7 @@ function StackNode(data, next){
 Stack.prototype.push = function(data){
   if(this.isFull()){
     //throw an exception
+    throw new Error("Stack overflow");
   }else{
     var next = new StackNode(data, this.top);
     //console.log(data);
@@ -29,6 +30,7 @@ Stack.prototype.push = function(data){
 Stack.prototype.pop = function(){
   if(this.isEmpty()){
     //throws an exception
+    throw new Error("stack is empty")
   }else{
     var data = this.top.data;
     this.top = this.top.next;
@@ -67,9 +69,26 @@ Stack.prototype.toString = function(){
 //create a stack of length 10;
 var stack1 = new Stack(10);
 //add digit 0 - 9 to stack1
-for(var i = 0; i < 10; i++){
-  stack1.push(i);
+for(var i = 0; i < 11; i++){
+  try{
+    stack1.push(i);
+  }catch(error){
+    console.log(error);
+    break;
+  }
 }
 
 //print the stack
 console.log(stack1.toString());//shoulde be 9 8 7 ....1 0
+
+//try pop
+for(i = 0; i < 11; i++){
+  try{
+    stack1.pop();
+  }catch(error){
+    console.log(error);
+    break;
+  }
+}
+//print the stack
+console.log(stack1.toString());//shoulde be nothing
