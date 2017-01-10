@@ -1,0 +1,33 @@
+Created by Jie Li, on Jan 8
+
+Build a simple calculator by using JavaScript. This simple application is to make use of
+what I learned about the core JS, which includes the language syntax and the core API that
+should be built in most JS interpreters.
+
+In this application, I implement the idea of stack and make use of the object-oriented methodology.
+More than that, I also the stack and algorithm to process the arithmetic equation, which is actually
+treated as a string in my application.
+
+To run the application, open calculation.htm in the browser
+
+Here are the logs of my progress:
+Jan 7:
+  Create the stack.
+Jan 8:
+  Read the equation as a sequence of digit characters, binary arithmetic operators,
+  the opening brace character and the closing brace character. No space is allowed in a number expression, e.g "1 23".
+  Actually there's no place to input the equation, so I just treat the
+  equation as a string, and assign it to a variable.
+
+  The algorithm that I used to evaluate the equation is divided into two steps:
+    1. Convert the equation to a postfix expression by using 2 stacks.
+    2. Evaluate the postfix expression to get the result.
+Jan 9:
+  Just realized that I don't have to create a stack. I can simply use array functions, such as
+  push(), pop(), unshift(), and shift().
+
+  Instead of using conditional statement to decide whether an input token is an operator, I use
+  the "in" operator to test if Operator, which is actually an enumerated type, has a property named by
+  that operator. In order to do that, I need to:
+    1. create a factory function named "enumeration".
+    2. use that "enumeration" function to create a new enumerated type.
