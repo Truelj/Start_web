@@ -1,41 +1,31 @@
 //Created by Jie Li, on Jan 8
-
-var s = "6*( 2+ 2 +5)+ 7";
+//include "Enumeration.js"
+//include "Operator.js"
+var s = "2+3 * 6 + 3";
 var i = 0;//At the beginning of s
-var stack1 = new Stack();//for operators
-var stack2 = new Stack();//for postfix expression
+//var stack1 = new Stack();//for operators
+//var stack2 = new Stack();//for postfix expression
+var stack1 = [];
+var stack2 = [];
+
+//Add function to Array.prototype
+Array.prototype.peek = function(){
+  if(this.length > 0){
+    return this[this.length-1];
+  }else{
+    return undefined;
+  }
+}
 
 //Add functions to String.prototype
 String.prototype.isOperator = function(){
-  var string_value = this.valueOf();
-  //use conditional statement to decide
-  if(string_value === "*"||
-    string_value === "/" ||
-    string_value === "+" ||
-    string_value === "-" ||
-    string_value === "(" ||
-    string_value === ")"
-  ){
-    return true;
-  }else{
-    return false;
-  }
+  return this.valueOf() in Operator;
 };
 
 String.prototype.isDigit = function(){
   var string_value = this.valueOf();
   //use conditional statement to decide , later I'll use regular expression
-  if(string_value === "0"||
-    string_value === "1"||
-    string_value === "2"||
-    string_value === "3"||
-    string_value === "4"||
-    string_value === "5"||
-    string_value === "6"||
-    string_value === "7"||
-    string_value === "8"||
-    string_value === "9"
-  ){
+  if(string_value >= "0" && string_value <= "9"){
     return true;
   }else{
     return false;
@@ -53,11 +43,11 @@ function processOperator(next){
       while(stack1.peek() !== "("){
         stack2.push(stack1.pop());
       }
-      stack1.pop();
-    }else if(previous !== "(" && compareOperators(next, previous)!= 1){
+      stack1.pop();//pop "("
+    }else if(previous !== "(" && Operator.compare(next, previous)!= 1){
       stack2.push(stack1.pop());//pop previous
       stack1.push(next);//push next
-    }else if(previous === "(" || compareOperators(next, previous) === 1){
+    }else if(previous === "(" || Operator.compare(next, previous) === 1){
       stack1.push(next);
     }
   }
@@ -68,17 +58,7 @@ function processNumber(number){
   stack2.push(number);
 }
 
-//operatorList is used to compare the precedences among operators
-var operatorList = {
-  "+": 0, "-": 0, "*": 1, "/": 1, "(": 2, ")":2
-}
-//return 1, if first operator has higher precendence than next
-//return 0, if first has the same precendence as second
-//return -1, if first has lower precendene as second
-function compareOperators(first, second){
-  return operatorList[first] - operatorList[second];
 
-}
 
 //read the expression while converting it into the postfix expression
 while(i < s.length){
@@ -108,9 +88,5 @@ while(stack1.peek()){
   stack2.push(stack1.pop());
 }
 //end of convertion to postfix expression
-console.log(stack2.toString());
-//reverse the stack
-while(stack2.peek()){
-  stack1.push(stack2.pop());
-}
-console.log(stack1.toString());
+//console.log(stack2.toString());
+console.log(stack2);
