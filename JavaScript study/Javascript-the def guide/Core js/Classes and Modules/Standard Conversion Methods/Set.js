@@ -56,8 +56,9 @@ Set.prototype.remove = function(value){
 //Test whether the current set has a value
 Set.prototype.contains = function(value){
     var name = Set.nameValue(value);
-    return this.values.hasOwnProperty[name];
-}
+    //console.log("contians is called, name is "+ name);
+    return this.values.hasOwnProperty(name);
+};
 
 //foreach method
 Set.prototype.forEach = function(f,c){
@@ -104,7 +105,7 @@ Set.prototype.toJSON = Set.prototype.toArray;
 
 Set.prototype.equals = function(that){
     if(this === that){return true;}
-    if(!(that instanceof Set){
+    if(!(that instanceof Set)){
         return false;
     }
     if(that.size !== this.size){
@@ -113,11 +114,18 @@ Set.prototype.equals = function(that){
     try{
         this.forEach(
             function(value){
-                if()
+                if(!that.contains(value)) throw false;
             }
         );
+        return true;
+    }catch(x){
+        if(x === false){
+            return false;
+        }else{
+            throw x;
+        }
     }
-}
+};
 
 //Assign an unique name for a value
 Set.nameValue = function(value){
@@ -137,11 +145,10 @@ Set.nameValue = function(value){
     //create a nested function for nameValue use
     function getObjectId(o){
         var objectId = "**objectId**";
-        if(!o.hasOwnProperty(name)){
+        if(!o.hasOwnProperty(objectId)){
             o[objectId] = Set.nameValue.nextObjectId++;
-        }else{
-            return o[objectId];
         }
+        return o[objectId];
     }
 };
 
