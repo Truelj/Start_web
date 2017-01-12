@@ -6,7 +6,7 @@
 //Each member of a set includes a name and a value.
 
 //A constructor for creating an arbitrary set of values
-//Argument: a list of values seperated by comma
+//Argument: a list of values seperated by comma, or an array.
 function Set(){
     //create instance properties
     this.values = {};

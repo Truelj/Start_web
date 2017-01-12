@@ -18,12 +18,12 @@ function type(o){
   return "Object...";
 }
 
-//return the class of an object
+//return the class name of an object 
 function classof(o){
   return Object.prototype.toString.call(o).slice(8,-1);
 }
 
-//return the name of a function or null for non funciton
+//return the name of a function or null 
 Function.prototype.getName = function(){
   if("name" in this ) return this.name;
   return this.name = this.toString().match(/function\s*([^(]*)\(/)[1];

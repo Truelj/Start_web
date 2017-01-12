@@ -10,7 +10,7 @@ console.log("JSON.stringify(set1): " + JSON.stringify(set1));//[1,2,3,null]
 //test standard conversion methods
 var set2 = new Set(1,2,3);
 console.log("set2 contain 1: " + set2.contains(1));
-console.log("set1.equals(set2): " + set1.equals(set2)); //false
+console.log("set1.equals(set2): " + set1.equals(set2)); //true
 console.log("set1 === set2: " + (set1 === set2)); //false
 
 
