@@ -2,6 +2,7 @@
 //include "Enumeration.js"
 //include "Operator.js"
 var s = "2+3 * 6 + 3";
+s = prompt("Enter a Math equation:");
 var i = 0;//At the beginning of s
 //var stack1 = new Stack();//for operators
 //var stack2 = new Stack();//for postfix expression
