@@ -11,27 +11,22 @@ function Set(){
     //create instance properties
     this.values = {};
     this.size = 0; 
-    this.addSet(arguments);
+    //if there's only one argument and that argument is an array
+    if(arguments.length === 1 && isArrayLike(arguments[0])){
+        this.add.apply(this,arguments[0]);
+    }else if(arguments.length > 0){
+        this.add.apply(this, arguments);
+    }
     
 }
 
-//create instance methods
+//add array members to the current set
+//a: an array, or an array like object
+Set.prototype.addArrayMembers = function(a){
+    this.add.apply(this,a);
+}
 
-//add one value to the current set
-Set.prototype.add = function(value){
-    var name = Set.nameValue(value);
-    if(!this.values.hasOwnProperty(name)){
-        this.values[name] = value;
-        this.size++;
-    }
-    console.log(name + " is added");
-    return this;
-};
-
-//add a list of value to the current set
-Set.prototype.addSet = function(arguments){
-    //remember arguments is an array like object
-    //so don't use for in loop
+Set.prototype.add = function(){
     for(var i = 0; i  < arguments.length; i++){
         var name = Set.nameValue(arguments[i]);
         if(!this.values.hasOwnProperty[name]){
@@ -101,6 +96,7 @@ Set.prototype.toArray = function(){
     this.forEach(function(value){a.push(value);});
     return a;
 };
+
 Set.prototype.toJSON = Set.prototype.toArray;
 
 Set.prototype.equals = function(that){
