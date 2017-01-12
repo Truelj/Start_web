@@ -1,2 +1,6 @@
 # Start_web
-This is the repository created for my first web development study. It contains basic html, css and javascript code.
+**This is the directory where I stored all code that I created while I was learning to be a good web developer.**
+**Typical subjects**
+  1.HTML 
+  2.CSS 
+  3.Javascript 
