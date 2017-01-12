@@ -1,0 +1,26 @@
+Jan 10, 2017
+
+Continuously learning about how to write the standard class methods, such as toString, valueOf, toJSON, equal() and compareTo(), which are adopted as Java conventions.
+
+Serialization:
+    Is a process of converting an bject's state to a string form from which it can later be restored.
+    
+Type supported by JSON
+    Finate numbers, true, false, string, object, null
+    
+    not supported by JSON
+    Function, undefined...
+    
+Two methods related to serialization
+    JSON.stringif()
+    object's toJSON()//called by JSON.stringif()
+    
+
+Standard conversion methods
+    equal()
+        To enable instances of your class to be tested for equalty by calling equals() method, rather than comparing them by using equality operators.
+        In the body of equal(), one should test whether 2 objects are instances of the same type.
+        
+    compareTo()
+        To enable instances of your class to be compared by calling compareTo() method, rather than comparing them by using comparision operators.
+        In the body of equal(), one should test whether 2 objects are instances of the same type.
