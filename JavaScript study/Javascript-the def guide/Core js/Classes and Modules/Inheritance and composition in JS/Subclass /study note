@@ -1,0 +1,26 @@
+Jan 12, 2017. 
+Created by Jie Li
+
+- Constructor or Prototype, which one is more important?
+    
+    Today I continued studying the concepts about classes in JS. I feel that when we talk about a class, we're actually talking about two things, one is the constructor, and the other one is its one property named "prototype". Although the constructor is used to initiate an object, the type of the object is actually decided by "prototype". 
+
+    However, there's no obvious way to get the prototype of one object 0. One way to access the prototype is o.constructor.prototype.
+
+- What does it mean to subclass a class?
+    
+    It's better not to confuse the idea of subclass in Java with that in JS. I prefer to understanding the idea of subclass in this way: 
+    By saying that B is the subclass of A, instances of B inherit all the instance methods of A. So we get "B.prototype = inherit(A.prototype)". 
+    
+    Then, why don't we say "B.prototype = A.prototype" ?
+    Because then we misunderstood the purpose of subclassing.
+    
+    Why? What's the purpose of subclassing?
+    In general, the purpose of subclassing is to modify the behaviors of superclass, but not to replace them. We still want to keep the original behaviors in A. Assume that "add" is a behavior in A, and in B we use the following way to modify "add":
+        B.prototype.add = ...
+    By doing that, we also mean:
+        A.prototype.add = ...
+    So, we replace the behavior of A.
+    
+    By doing "B.prototype = inherit(A.prototype)", we can keep the original behaviors in A as well as modify behaviors in B. 
+    
