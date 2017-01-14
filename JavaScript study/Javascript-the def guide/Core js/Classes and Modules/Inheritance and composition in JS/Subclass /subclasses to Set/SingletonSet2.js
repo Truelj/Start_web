@@ -7,6 +7,7 @@
 function SingletonSet(member){
     this.member = member;
 }
+
 defineSubclass(Set, SingletonSet,
             {   add: function(){throw "read-only set";},
                 remove: function(){throw "read-only set";},
@@ -15,10 +16,3 @@ defineSubclass(Set, SingletonSet,
                 equals: function(that){return (that instanceof Set) && that.size() === 1 && that.contains(this.member)},
                 foreach: function(f,c){return f.call(c, this.member)}
 });
-
-//test
-var s1 = new Set(1);
-var s2 = new SingletonSet(1);
-console.log("s2.constructor: " + s2.constructor);
-console.log("s2.equals(s1): " + s2.equals(s1));
-console.log("s1.equals(s2): " + s1.equals(s2));

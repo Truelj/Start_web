@@ -1,4 +1,5 @@
 //Created by Jie Li
+//return an object that has a prototype object equal to o
 
 function inherit(o){
     if(o == null){
